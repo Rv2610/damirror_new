@@ -27,26 +27,22 @@
   </div>
   
   <div >
-    <a href="https://youtu.be/UB8cxIzERcg">
-      <Button id=songs> {{name1}}
+    {% if song %}
+
+      {% for i in song %}
+      <a href={{i.songlink}}>
+        <Button id=songs> {{i.songname}}
         </Button>
-    </a>
-    <a href="https://youtu.be/6dEUD7SYsxc">
-      <Button>
-        {{name2}}
-      </Button>
-    </a>
-    <a hred="https://youtu.be/3TIeFMNR3y0">
-      <Button>{{name3}}
-      </Button>
-    </a>
-    <a href="https://youtu.be/dCz0nXFVO8k">
-      <Button>"{{name4}}
-      </Button>
-    </a>
+      </a>
+      {% endfor %}
+        
+    {% else %}
+            <h1>please add songs</h1>
+    {% endif %}
+    
   </div>
    <div id=logos>
-     <a href="https://instagram.com/mirror__music?utm_medium=copy_link" id=one>
+     <a href="https://instagram.com/damirror_sensei?utm_medium=copy_link" id=one>
          <img alt="Qries" src="/static/mirror_img/instagram.png.png"
          width=50px height=50px>
      </a>
@@ -60,7 +56,7 @@
     </a>
    </div>
  
-  <script src="main.js"></script>
+  
 </body>
 
 
